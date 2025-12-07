@@ -42,7 +42,7 @@ kotlin {
 }
 
 dependencies {
-
+    implementation(libs.androidx.material.icons.extended)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -53,6 +53,8 @@ dependencies {
 //   room
     implementation(libs.room.runtime)
     implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.material3)
     ksp(libs.androidx.room.compiler)
 
     implementation(libs.androidx.material3)

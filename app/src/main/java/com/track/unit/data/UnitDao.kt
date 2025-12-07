@@ -6,6 +6,7 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
+import java.util.Date
 
 @Dao
 interface UnitDao {
@@ -23,5 +24,8 @@ interface UnitDao {
 
     @Query("SELECT * FROM units WHERE id = :id")
     fun getUnit(id: Int): Flow<Units?>
+
+    @Query(value = "SELECT `last date` FROM units ORDER BY id DESC LIMIT 1")
+    suspend fun getLastDate(): Date?
 }
 

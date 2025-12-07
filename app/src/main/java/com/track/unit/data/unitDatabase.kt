@@ -7,7 +7,7 @@ import androidx.room.TypeConverters
 import android.content.Context
 
 
-@Database(entities = [Units::class], version = 1)
+@Database(entities = [Units::class], version = 4)
 @TypeConverters(Converters::class)
 abstract class UnitDatabase : RoomDatabase() {
     abstract fun unitDao(): UnitDao
